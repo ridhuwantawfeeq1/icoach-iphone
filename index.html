@@ -35,7 +35,7 @@ small{color:#9db0be;line-height:1.5}
 
 <div class="header">
 <div class="logo">iCoach Cricket</div>
-<div class="status" id="status">● Not connected</div>
+<div class="status" id="status">● Checking Wi-Fi</div>
 </div>
 
 <div class="card">
@@ -105,6 +105,17 @@ function connectionInfo(){
 document.getElementById('connectHelp').textContent=
 'Connect to the iWinner machine Wi-Fi in iPhone Settings. Machine communication is not yet implemented.';
 }
+  unction checkWiFiStatus(){
+  const status = document.getElementById("status");
+  if(navigator.onLine){
+    status.textContent = "● Network available";
+  }else{
+    status.textContent = "● Offline";
+  }
+}
+window.addEventListener("online", checkWiFiStatus);
+window.addEventListener("offline", checkWiFiStatus);
+checkWiFiStatus();
 </script>
 
 </body>
