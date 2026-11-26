@@ -1,0 +1,8 @@
+{
+  "name": "iCoach Cricket",
+  "short_name": "iCoach",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101820",
+  "theme_color": "#101820"
+}
